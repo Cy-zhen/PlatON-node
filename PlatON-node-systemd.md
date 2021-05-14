@@ -1,4 +1,4 @@
-# PlatON主网启动
+# PlatON主网启动  加入PlatON主网络
 cd ~/platon-node
 ## platon.service
 ```
@@ -18,13 +18,18 @@ RestartSec=30
 WantedBy=multi-user.target
 ```
 
-> sudo systemctl daemon-reload
+⬇️
+```
+ sudo systemctl daemon-reload
  sudo systemctl enable platon
  sudo systemctl start platon
  sudo systemctl stop platon
- >>sudo systemctl daemon-reload && sudo systemctl enable platon && sudo systemctl start platon
-
->platon attach http://localhost:6789
+ sudo systemctl daemon-reload && sudo systemctl enable platon && sudo systemctl start platon
+```
+## 查看节点状态
+```
+platon attach http://localhost:6789
 admin.peers
 platon.blockNumber
 platon.syncing
+```
