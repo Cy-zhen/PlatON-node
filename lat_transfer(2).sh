@@ -5,7 +5,7 @@ lat_address="lat1p8e0g4vekj8mhn07vmvkf035wvx3ht8xeugjfj"
 lat_address2="lat1d72df9muzy860waz3vfs7flhrj350lgkp8f37t"
 # value=`echo $line | cut -f 2 -d " "`
 value=`platon_mtool account balance reward.json --config $PLATON_MTOOLDIR/validator/validator_config.json | grep LAT | cut -f 2 -d ":"| cut -f 1 -d "."`
-value_transfer = $value/2
+value_transfer=$value/2
 echo $lat_address
 echo $lat_address2
 echo $value
